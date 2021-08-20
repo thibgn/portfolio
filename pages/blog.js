@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { getDatabase } from '../utils/notion';
 // import { Link } from 'next/link';
 
@@ -24,8 +25,15 @@ export const getStaticProps = async () => {
 
 export default function Blog({ posts }) {
   return (
-    <main>
-      <h1>This is the blog</h1>
+    <>
+      <Head>
+        <title>Blog</title>
+        <meta
+          name='description'
+          content='Thibaud Gerin | Fullstack Developer | Blog'
+        />
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
       <ul>
         {posts.map((post) => {
           return (
@@ -35,6 +43,6 @@ export default function Blog({ posts }) {
           );
         })}
       </ul>
-    </main>
+    </>
   );
 }
