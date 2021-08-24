@@ -14,19 +14,19 @@ export const notion = new Client({
 export const getDatabase = async (databaseId) => {
   const response = await notion.databases.query({
     database_id: databaseId,
-  });
-  return response.results;
-};
-
-export const getPostIdFromSlug = async (slug) => {
-  const response = await notion.databases.query({
-    database_id: process.env.NOTION_BLOG_DB,
     filter: {
-      property: 'slug',
-      rich_text: {
-        equals: slug,
+      property: 'published',
+      checkbox: {
+        equals: true,
       },
     },
   });
   return response.results;
+};
+
+export const getTitleFromId = async (id) => {
+  const response = await notion.pages.retrieve({
+    page_id: id,
+  });
+  return response.properties.title.title[0].plain_text;
 };
