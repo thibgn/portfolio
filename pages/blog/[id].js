@@ -1,4 +1,4 @@
-import { notionAPI, getDatabase } from '../../utils/notion';
+import { notionAPI, getDatabase, getTitleFromId } from '../../utils/notion';
 import { NotionRenderer, Code } from 'react-notion-x';
 
 export const getStaticPaths = async () => {
@@ -12,27 +12,31 @@ export const getStaticPaths = async () => {
 export async function getStaticProps(context) {
   const { id } = context.params;
   const recordMap = await notionAPI.getPage(id);
+  const title = await getTitleFromId(id);
 
   return {
     props: {
       recordMap,
+      title,
     },
     revalidate: 1,
   };
 }
 
-export default function Post({ recordMap }) {
+export default function Post({ recordMap, title }) {
+  (() => {
+    console.log(title);
+  })();
+
   return (
-    <main>
-      <h1>This is a post </h1>
+    <>
+      <h1>{title}</h1>
       <NotionRenderer
         recordMap={recordMap}
-        fullPage={false}
-        darkMode={false}
         components={{
           code: Code,
         }}
       />
-    </main>
+    </>
   );
 }
