@@ -19,3 +19,13 @@ a {
 .notion-viewport {
   z-index: -1;
 }
+
+.noselect {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+}
+
+.btnClick {
+  transform: scale(1.2);
+}

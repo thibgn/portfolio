@@ -238,7 +238,7 @@ const Intro = styled.div`
 `;
 
 const Footer = styled.div`
-  margin-top: 80px;
+  margin-top: 40px;
   padding: 40px 0;
   display: flex;
   justify-content: space-between;

@@ -29,14 +29,4 @@ export const GlobalStyles = createGlobalStyle`
     font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif;
     transition: all 0.50s linear;
   }
-
-  .noselect {
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-  }
-
-  .btnClick {
-    transform: scale(1.2);
-  }
 `;
