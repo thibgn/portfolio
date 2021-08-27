@@ -22,11 +22,18 @@ export const darkTheme = {
   background: Colors.light,
 };
 
+export const Fonts = {
+  titles: "'Noto Sans JP', sans-serif",
+  paragraphs: "'Roboto Mono', monospace",
+};
+
 export const GlobalStyles = createGlobalStyle`
-  body {
+ 
+body {
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
     font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif;
     transition: all 0.50s linear;
+    font-family: ${Fonts.paragraphs}
   }
 `;

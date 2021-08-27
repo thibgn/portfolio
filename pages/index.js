@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import styled from 'styled-components';
 import Image from 'next/image';
-import { Colors } from '../styles/ThemeConfig';
+import { Colors, Fonts } from '../styles/ThemeConfig';
 import useDarkMode from 'use-dark-mode';
 
 export default function Home() {
@@ -159,6 +159,8 @@ const Section = styled.div`
     z-index: 10;
     font-variant: small-caps;
     font-size: 1.6rem;
+    font-weight: normal;
+    font-family: ${Fonts.titles};
   }
 
   & > .category {
