@@ -5,12 +5,15 @@ import styled, { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme, GlobalStyles } from '../styles/ThemeConfig';
 import useDarkMode from 'use-dark-mode';
 import { useEffect, useState } from 'react';
+import ToggleTheme from '../components/ToggleTheme';
 
 export default function MyApp({ Component, pageProps }) {
   const [pageTitle, setPageTitle] = useState();
   const [isMounted, setIsMounted] = useState(false);
   const darkMode = useDarkMode(true);
   const theme = darkMode.value ? darkTheme : lightTheme;
+  console.log(darkMode);
+  console.log(theme);
 
   useEffect(() => {
     setIsMounted(true);
@@ -24,7 +27,7 @@ export default function MyApp({ Component, pageProps }) {
         <Main>
           <NavWrapper>
             <Title>{pageTitle}</Title>
-            <ToggleButton onClick={darkMode.toggle} />
+            <ToggleTheme />
           </NavWrapper>
           <Component {...pageProps} />
         </Main>
@@ -43,6 +46,7 @@ const Main = styled.section`
 `;
 
 const Title = styled.h1`
+  margin: 80px 0;
   font-size: 3.5rem;
 `;
 
@@ -50,9 +54,4 @@ const NavWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-`;
-
-const ToggleButton = styled.button`
-  height: 32px;
-  padding: 16px;
 `;

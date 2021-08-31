@@ -1,14 +1,9 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
 
 a {
   color: inherit;
   text-decoration: none;
+  z-index: 10;
 }
 
 * {
@@ -25,7 +20,31 @@ a {
   -khtml-user-select: none;
   -webkit-user-select: none;
 }
+   
+.animate {
+  position: absolute;
+}
 
-.btnClick {
-  transform: scale(1.2);
+.animate--down {
+  animation: down 1.5s infinite;
+}
+
+@keyframes down {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translateY(5px);
+  }
+  40% {
+    transform: translateY(-1px);
+  }
+}
+
+.flex-center {
+  margin: 40px auto;
+}
+
+.italic {
+  font-style: italic;
 }

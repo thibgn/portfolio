@@ -22,11 +22,36 @@ export const darkTheme = {
   background: Colors.light,
 };
 
+export const Fonts = {
+  titles: "'Noto Sans JP', sans-serif",
+  paragraphs: "'Roboto Mono', monospace",
+};
+
 export const GlobalStyles = createGlobalStyle`
   body {
-    background: ${({ theme }) => theme.body};
-    color: ${({ theme }) => theme.text};
-    font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif;
-    transition: all 0.50s linear;
+      background: ${({ theme }) => theme.body};
+      color: ${({ theme }) => theme.text};
+      font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif;
+      transition: all 0.50s linear;
+      font-family: ${Fonts.paragraphs}
+    }
+
+  .underlined  {
+    text-decoration: none;
+    background-image: linear-gradient
+      (to right, ${Colors.secondary} 0, 
+      ${Colors.secondary}
+      100%);
+    background-position: 0 1.2em;
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: all .5s;
+    border-bottom: 1px solid ${Colors.light};
+    
+    &:hover {
+      color: ${Colors.secondary};
+      background-size: 100% 100%;
+      border-color: ${Colors.secondary}
+    }
   }
 `;
