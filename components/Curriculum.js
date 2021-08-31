@@ -27,27 +27,52 @@ export default function Curriculum() {
         </div>
       </CvSection>
       <CvSection theme={theme}>
-        <h2 className='title'>experiences</h2>
+        <h2 className='title'>EXPERIENCES 💻</h2>
       </CvSection>
       <CvSection theme={theme}>
         <div className='category'>2018 - 2019</div>
         <div className='desc'>
-          <span>Product Owner @Onepark</span>
+          <span>
+            Product Owner{' '}
+            <a
+              className='underlined underlined--offset'
+              href='https://www.onepark.fr'
+            >
+              @Onepark
+            </a>
+          </span>
         </div>
       </CvSection>
       <CvSection theme={theme}>
         <div className='category'>2014 - 2018</div>
         <div className='desc'>
-          <span>Digital Marketing @Onepark</span>
+          <span>
+            Digital Marketing{' '}
+            <a
+              className='underlined underlined--offset'
+              href='https://www.onepark.fr'
+            >
+              @Onepark
+            </a>
+          </span>
         </div>
       </CvSection>
       <CvSection theme={theme}>
-        <h2 className='title'>formations</h2>
+        <h2 className='title'>FORMATIONS 🎓</h2>
       </CvSection>
       <CvSection theme={theme}>
         <div className='category'>2020</div>
         <div className='desc'>
-          <span>Le Wagon bootcamp</span>
+          <span>
+            {' '}
+            <a
+              className='underlined underlined--offset'
+              href='https://www.lewagon.com/marseille'
+            >
+              Le Wagon
+            </a>{' '}
+            bootcamp
+          </span>
         </div>
       </CvSection>
       <CvSection theme={theme}>
@@ -63,12 +88,13 @@ export default function Curriculum() {
         </div>
       </CvSection>
       <CvSection theme={theme}>
-        <h2 className='title'>hobbies</h2>
+        <h2 className='title'>HOBBIES 🎨</h2>
       </CvSection>
       <CvSection>
         <Hobbies theme={theme}>
           <p>
-            Crypto Basketball Climbing Outdoors Chess Yoga Meditation Ski Moto
+            Crypto Basketball Climbing Outdoors Chess Yoga Meditation Ski
+            Drawing
           </p>
         </Hobbies>
       </CvSection>
@@ -78,6 +104,7 @@ export default function Curriculum() {
 
 const Resume = styled.div`
   margin: 40px 0;
+  padding-top: 40px;
   margin-bottom: 0;
   position: relative;
 

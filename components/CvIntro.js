@@ -1,11 +1,10 @@
-import { Colors } from '../styles/ThemeConfig';
 import styled from 'styled-components';
 import Image from 'next/image';
 
 export default function CvIntro() {
   return (
     <Intro>
-      <Image src='/profile.png' width='300' height='300' alt='Thibaud Gerin' />
+      <Image src='/profile.png' width='400' height='400' alt='Thibaud Gerin' />
       <span>
         <Subtitle>Hello I'm Thibaud 👋</Subtitle>
         I’m a digital crafter & acquisition specialist, living in the south of
@@ -16,11 +15,9 @@ export default function CvIntro() {
   );
 }
 
-const Subtitle = styled.h2`
-  line-height: 0.8rem;
-`;
-
 const Intro = styled.div`
+  margin: 60px 0;
+  line-height: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,3 +26,5 @@ const Intro = styled.div`
     border-radius: 50%;
   }
 `;
+
+const Subtitle = styled.h2``;

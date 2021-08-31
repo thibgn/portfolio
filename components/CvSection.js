@@ -2,22 +2,21 @@ import { Colors, Fonts } from '../styles/ThemeConfig';
 import styled from 'styled-components';
 
 const CvSection = styled.div`
-  margin: 40px 0;
+  margin: 80px 0;
   display: flex;
   align-items: center;
   position: relative;
 
   & > .title {
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 60px;
     padding-bottom: 10px;
     background: ${(props) =>
       props.theme === 'dark' ? Colors.dark : Colors.light};
     transition: all 0.5s linear;
     z-index: 10;
-    font-variant: small-caps;
-    font-size: 1.6rem;
-    font-weight: normal;
+    font-size: 1.4rem;
+    font-weight: bold;
     font-family: ${Fonts.titles};
   }
 
