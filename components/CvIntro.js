@@ -6,7 +6,7 @@ export default function CvIntro() {
     <Intro>
       <Image src='/profile.png' width='400' height='400' alt='Thibaud Gerin' />
       <span>
-        <Subtitle>Hello I'm Thibaud 👋</Subtitle>
+        <Subtitle>Hello I&apos;m Thibaud 👋</Subtitle>
         I’m a digital crafter & acquisition specialist, living in the south of
         France. I love technology as much as nature, enthusiastic when it comes
         to music, personal development, crypto and many other things.
