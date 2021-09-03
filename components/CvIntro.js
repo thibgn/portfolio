@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function CvIntro() {
   return (
     <Intro>
-      <Image src='/profile.png' width='400' height='400' alt='Thibaud Gerin' />
+      <Image src='/profile.png' width='500' height='500' alt='Thibaud Gerin' />
       <span>
         <Subtitle>Hello I&apos;m Thibaud 👋</Subtitle>
         I’m a digital crafter & acquisition specialist, living in the south of
@@ -17,7 +17,7 @@ export default function CvIntro() {
 
 const Intro = styled.div`
   margin: 60px 0;
-  line-height: 1.5rem;
+  line-height: 1.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,6 +25,15 @@ const Intro = styled.div`
   > * > img {
     border-radius: 50%;
   }
+
+  @media screen and (max-width: 425px) {
+    margin-left: -40%;
+    > * > img {
+      display: none !important;
+    }
+  }
 `;
 
-const Subtitle = styled.h2``;
+const Subtitle = styled.h2`
+  line-height: 2rem;
+`;

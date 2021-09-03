@@ -36,22 +36,25 @@ export const GlobalStyles = createGlobalStyle`
       font-family: ${Fonts.paragraphs}
     }
 
-  .underlined  {
+  .underlined {
+    line-height: 1.2;
     text-decoration: none;
-    background-image: linear-gradient
-      (to right, ${Colors.secondary} 0, 
-      ${Colors.secondary}
-      100%);
+    border-bottom: 1px solid ${Colors.light};
     background-position: 0 1.2em;
     background-size: 0 100%;
     background-repeat: no-repeat;
     transition: all .5s;
-    border-bottom: 1px solid ${Colors.light};
-    
+
     &:hover {
-      color: ${Colors.secondary};
       background-size: 100% 100%;
-      border-color: ${Colors.secondary}
+      border-color: transparent;
     }
   }
+  
+  .underlined--offset {
+    box-shadow: inset 0 0.8em 0 0  ${({ theme }) => theme.body};
+    background-image: linear-gradient(to right, ${Colors.accent} 0, 
+      ${Colors.secondary} 100%);  
+  }
+  
 `;

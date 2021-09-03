@@ -9,6 +9,14 @@ const Footer = styled.div`
   & > * > span {
     color: red;
   }
+
+  @media screen and (max-width: 425px) {
+    font-size: 0.75rem;
+
+    div {
+      width: 40%;
+    }
+  }
 `;
 
 export default Footer;

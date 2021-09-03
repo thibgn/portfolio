@@ -12,8 +12,6 @@ export default function MyApp({ Component, pageProps }) {
   const [isMounted, setIsMounted] = useState(false);
   const darkMode = useDarkMode(true);
   const theme = darkMode.value ? darkTheme : lightTheme;
-  console.log(darkMode);
-  console.log(theme);
 
   useEffect(() => {
     setIsMounted(true);
@@ -48,6 +46,10 @@ const Main = styled.section`
 const Title = styled.h1`
   margin: 80px 0;
   font-size: 3.5rem;
+
+  @media screen and (max-width: 767px) {
+    font-size: 2rem;
+  }
 `;
 
 const NavWrapper = styled.div`

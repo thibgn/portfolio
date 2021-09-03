@@ -64,25 +64,24 @@ export default function Curriculum() {
         <div className='category'>2020</div>
         <div className='desc'>
           <span>
-            {' '}
             <a
               className='underlined underlined--offset'
               href='https://www.lewagon.com/marseille'
             >
               Le Wagon
-            </a>{' '}
-            bootcamp
+            </a>
+            &nbsp;coding bootcamp
           </span>
         </div>
       </CvSection>
       <CvSection theme={theme}>
-        <div className='category'>2011 - 13</div>
+        <div className='category'>2011 - 2013</div>
         <div className='desc'>
           <span>Master in Digital Communications</span>
         </div>
       </CvSection>
       <CvSection theme={theme}>
-        <div className='category'>2008 - 11</div>
+        <div className='category'>2008 - 2011</div>
         <div className='desc'>
           <span>Licence in Computer Networking</span>
         </div>
@@ -93,8 +92,8 @@ export default function Curriculum() {
       <CvSection>
         <Hobbies theme={theme}>
           <p>
-            Crypto Basketball Climbing Outdoors Chess Yoga Meditation Ski
-            Drawing
+            Crypto, Basketball, Climbing, Outdoors, Chess, Yoga, Meditation,
+            Ski, Drawing
           </p>
         </Hobbies>
       </CvSection>
@@ -140,4 +139,9 @@ const Hobbies = styled.div`
   background: ${(props) =>
     props.theme === 'dark' ? Colors.dark : Colors.light};
   z-index: 10;
+
+  @media screen and (max-width: 425px) {
+    font-size: 0.7rem;
+    line-height: 1rem;
+  }
 `;

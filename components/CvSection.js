@@ -18,6 +18,10 @@ const CvSection = styled.div`
     font-size: 1.4rem;
     font-weight: bold;
     font-family: ${Fonts.titles};
+    @media screen and (max-width: 425px) {
+      font-size: 1.2em;
+    }
+  }
   }
 
   & > .category {
@@ -26,6 +30,9 @@ const CvSection = styled.div`
     font-weight: 600;
     text-align: right;
     padding-right: 40px;
+    @media screen and (max-width: 425px) {
+      font-size: 1.1em;
+    }
   }
 
   & > .desc {
@@ -33,8 +40,15 @@ const CvSection = styled.div`
     font-size: 1.05rem;
     padding-left: 40px;
 
+    @media screen and (max-width: 425px) {
+      font-size: 0.8rem;
+    }
+
     & > p {
       line-height: 0.6rem;
+      @media screen and (max-width: 425px) {
+        line-height: 1.05rem;
+      }
     }
 
     &:before {

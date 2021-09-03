@@ -78,4 +78,8 @@ const GetInTouch = styled.div`
     background-position: left;
     transform: scale(1.2);
   }
+
+  @media screen and (max-width: 425px) {
+    font-size: 0.7em;
+  }
 `;

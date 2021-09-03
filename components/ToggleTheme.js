@@ -43,6 +43,7 @@ const ToggleDark = styled.div`
   & > svg {
     padding-top: 10px;
     width: 40px;
+    cursor: pointer;
 
     &:hover {
       fill: #031a2f;
@@ -53,6 +54,7 @@ const ToggleLigth = styled.div`
   & > svg {
     padding-top: 10px;
     width: 40px;
+    cursor: pointer;
 
     &:hover {
       fill: #f6f7f8;
