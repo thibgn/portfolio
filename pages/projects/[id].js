@@ -5,7 +5,7 @@ import Link from 'next/link';
 export const getStaticPaths = async () => {
   const database = await getDatabase(process.env.NOTION_PROJECTS_DB);
   return {
-    paths: database.map((post) => ({ params: { id: post.id } })),
+    paths: database.map((project) => ({ params: { id: project.id } })),
     fallback: true,
   };
 };
