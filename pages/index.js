@@ -24,9 +24,7 @@ export default function Home() {
       <h2 className='flex-center'>
         Check out my&nbsp;
         <Link href='/projects/' alt='projects'>
-          <a className='underlined underlined--offset' target='_blank'>
-            latest projects
-          </a>
+          <a className='underlined underlined--offset'>latest projects</a>
         </Link>
       </h2>
       <div className='italic flex-center'>
