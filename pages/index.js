@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import styled from 'styled-components';
 import useDarkMode from 'use-dark-mode';
 import { Colors, Fonts } from '../styles/ThemeConfig';
@@ -22,13 +23,11 @@ export default function Home() {
       <CvIntro />
       <h2 className='flex-center'>
         Check out my&nbsp;
-        <a
-          href='/projects/'
-          className='underlined underlined--offset'
-          target='_blank'
-        >
-          latest projects
-        </a>
+        <Link href='/projects/' alt='projects'>
+          <a className='underlined underlined--offset' target='_blank'>
+            latest projects
+          </a>
+        </Link>
       </h2>
       <div className='italic flex-center'>
         Scroll down for CV
