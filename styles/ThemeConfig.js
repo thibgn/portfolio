@@ -6,6 +6,15 @@ export const Colors = {
   secondary: '#2EC4B6',
   accent: '#20A4F3',
   light: '#F6F7F8',
+  pink: '#EA9AEA',
+  blue: '#71C8FE',
+  green: '#2EC4B6',
+  red: '#FF3366',
+  yellow: '#DCEB0E',
+  purple: '#9D7DDE',
+  orange: '#FFBB33',
+  gray: '#ACBDBA',
+  brown: '#ACBDBA',
 };
 
 export const lightTheme = {
@@ -37,6 +46,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
   .underlined {
+    color: ${Colors.accent};
     line-height: 1.2;
     text-decoration: none;
     border-bottom: 1px solid ${Colors.light};
