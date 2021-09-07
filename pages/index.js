@@ -20,6 +20,16 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <CvIntro />
+      <h2 className='flex-center'>
+        Check out my&nbsp;
+        <a
+          href='/projects/'
+          className='underlined underlined--offset'
+          target='_blank'
+        >
+          latest projects
+        </a>
+      </h2>
       <div className='italic flex-center'>
         Scroll down for CV
         <span className='animate animate--down'>&nbsp;👇</span>
