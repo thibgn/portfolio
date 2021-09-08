@@ -49,6 +49,11 @@ const ProjectGrid = styled.div`
     width: 100%;
     max-width: 400px;
     padding-bottom: 20px;
+    opacity: 0.8;
+    transition: all 0.3s;
+    &:hover {
+      opacity: 1;
+    }
   }
 
   .project_details {
