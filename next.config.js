@@ -2,9 +2,10 @@ module.exports = {
   reactStrictMode: true,
   images: {
     domains: [
-      'notion.com',
+      'www.notion.com',
       'via.placeholder.com',
       's3.us-west-2.amazonaws.com',
+      'www.notion.so',
     ],
   },
 };
