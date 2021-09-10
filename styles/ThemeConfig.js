@@ -10,11 +10,11 @@ export const Colors = {
   blue: '#71C8FE',
   green: '#2EC4B6',
   red: '#FF3366',
-  yellow: '#DCEB0E',
+  yellow: '#E5D931',
   purple: '#9D7DDE',
   orange: '#FFBB33',
-  gray: '#ACBDBA',
-  brown: '#ACBDBA',
+  gray: '#626262',
+  brown: '#9C7C6A',
 };
 
 export const lightTheme = {

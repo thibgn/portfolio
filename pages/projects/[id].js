@@ -12,7 +12,6 @@ export const getStaticPaths = async () => {
 
 export async function getStaticProps(context) {
   const { id } = context.params;
-  console.log(id);
   const recordMap = await notionAPI.getPage(id);
   const title = await getTitleFromId(id);
 

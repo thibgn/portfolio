@@ -44,38 +44,4 @@ const ProjectGrid = styled.div`
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
   }
-
-  > a {
-    width: 100%;
-    max-width: 400px;
-    padding-bottom: 20px;
-    opacity: 0.8;
-    transition: all 0.3s;
-    &:hover {
-      opacity: 1;
-    }
-  }
-
-  .project_details {
-    padding: 4px;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-  }
-
-  .project_tags {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-
-  .project_name {
-    line-height: 1.4em;
-    font-size: 0.9em;
-  }
-
-  .project_desc {
-    font-size: 0.75em;
-    opacity: 0.7;
-  }
 `;

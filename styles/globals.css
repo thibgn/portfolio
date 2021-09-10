@@ -49,3 +49,35 @@ a {
 .italic {
   font-style: italic;
 }
+
+.notion {
+  font-family: inherit !important;
+}
+
+.notion-asset-wrapper-image > div {
+  height: auto !important;
+}
+
+.notion-asset-caption {
+  opacity: .7;
+  font-size: .7em !important;
+  text-align: center;
+}
+
+.notion-text > a {
+  opacity: 1;
+  line-height: 1.2;
+  text-decoration: none;
+  background-image: linear-gradient(to right, #20A4F3 0, 
+  #2EC4B6 100%);  
+  background-position: 0 1.2em;
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: all .5s;
+}
+
+.notion-text > a:hover {
+  color: #20A4F3;
+  background-size: 100% 100%;
+  border-color: transparent;
+}
