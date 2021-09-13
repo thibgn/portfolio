@@ -41,6 +41,10 @@ a {
   }
 }
 
+.top {
+  z-index: 100;
+}
+
 .flex-center {
   margin: 40px auto;
   padding-right: 20px;

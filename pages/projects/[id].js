@@ -1,6 +1,7 @@
 import { notionAPI, getDatabase, getTitleFromId } from '../../utils/notion';
 import { NotionRenderer, Code } from 'react-notion-x';
-import Link from 'next/link';
+import Nav from '../../components/Nav';
+import Back from '../../components/Back';
 
 export const getStaticPaths = async () => {
   const database = await getDatabase(process.env.NOTION_PROJECTS_DB);
@@ -29,11 +30,9 @@ export default function Project({ recordMap, title }) {
     <>
       {recordMap && (
         <>
-          <Link href={'/projects'}>
-            <a>&larr; back</a>
-          </Link>
+          <Nav title={title} />
+          <Back path={'/projects'} name='projets' home />
           <br />
-          <h1>{title}</h1>
           <NotionRenderer
             recordMap={recordMap}
             components={{

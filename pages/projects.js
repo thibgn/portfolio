@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 import { getDatabase } from '../utils/notion';
 import ProjectItem from '../components/ProjectItem';
+import Nav from '../components/Nav';
+import Back from '../components/Back';
 
 export const getStaticProps = async () => {
   const projects = await getDatabase(process.env.NOTION_PROJECTS_DB);
@@ -25,6 +27,9 @@ export default function Projects({ projects }) {
         />
         <link rel='icon' href='/favicon.ico' />
       </Head>
+      <Nav title='Projets' />
+      <Back home />
+      <br />
       <ProjectGrid>
         {projects.map((p) => {
           return <ProjectItem p={p} key={p.id} />;
