@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@notionhq/client": "^0.2.1",
+    "framer-motion": "^4.1.17",
     "next": "11.0.1",
     "notion-client": "^4.7.3",
     "notion-utils": "^4.7.3",

@@ -6,6 +6,7 @@ import { Colors, Fonts } from '../styles/ThemeConfig';
 import Curriculum from '../components/Curriculum';
 import CvIntro from '../components/CvIntro';
 import Footer from '../components/Footer';
+import Nav from '../components/Nav';
 
 export default function Home() {
   const theme = useDarkMode().value === true ? 'dark' : 'light';
@@ -20,6 +21,8 @@ export default function Home() {
         />
         <link rel='icon' href='/favicon.ico' />
       </Head>
+
+      <Nav title='Thibaud Gerin' />
       <CvIntro />
       <h2 className='flex-center'>
         Check out my&nbsp;

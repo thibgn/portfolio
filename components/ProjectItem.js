@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import { Colors } from '../styles/ThemeConfig';
 import useDarkMode from 'use-dark-mode';
+import { motion } from 'framer-motion';
 
 export default function ProjectItem({ p }) {
   const theme = useDarkMode().value === true ? 'dark' : 'light';
@@ -13,31 +14,46 @@ export default function ProjectItem({ p }) {
   const desc = p.properties.description.rich_text[0]?.plain_text || '';
 
   return (
-    <Projet>
-      <Link href={`/projects/${p.id}`} key={p.id} className='project'>
-        <a>
-          <Image src={img} width={400} height={300} placeholder={blur} alt='' />
-          <div className='project_details'>
-            <span className='project_name'>{name}</span>
-            <div className='project_tags'>
-              {tags.map((tag) => {
-                return (
-                  <Tag
-                    key={tag.id}
-                    className='tag'
-                    background={tag.color}
-                    theme={theme}
-                  >
-                    {tag.name}
-                  </Tag>
-                );
-              })}
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      onHoverStart={(e) => e.target.classList.add('top')}
+      onHoverEnd={(e) => e.target.classList.remove('top')}
+      transition={{ ease: 'easeIn', duration: 0.2 }}
+      initial={false}
+    >
+      <Projet>
+        <Link href={`/projects/${p.id}`} key={p.id} className='project'>
+          <a>
+            <Image
+              className='project_img'
+              src={img}
+              width={400}
+              height={300}
+              placeholder={blur}
+              alt=''
+            />
+            <div className='project_details'>
+              <span className='project_name'>{name}</span>
+              <div className='project_tags'>
+                {tags.map((tag) => {
+                  return (
+                    <Tag
+                      key={tag.id}
+                      className='tag'
+                      background={tag.color}
+                      theme={theme}
+                    >
+                      {tag.name}
+                    </Tag>
+                  );
+                })}
+              </div>
+              <p className='project_desc'>{desc}</p>
             </div>
-            <p className='project_desc'>{desc}</p>
-          </div>
-        </a>
-      </Link>
-    </Projet>
+          </a>
+        </Link>
+      </Projet>
+    </motion.div>
   );
 }
 
@@ -50,6 +66,10 @@ const Projet = styled.div`
     & > div {
       position: relative;
     }
+  }
+
+  .project_img {
+    border-radius: 3px;
   }
 
   .project_tags {

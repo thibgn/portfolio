@@ -53,7 +53,7 @@ export const GlobalStyles = createGlobalStyle`
     background-position: 0 1.2em;
     background-size: 0 100%;
     background-repeat: no-repeat;
-    transition: all .5s;
+    transition: all .5s linear;
 
     &:hover {
       background-size: 100% 100%;
