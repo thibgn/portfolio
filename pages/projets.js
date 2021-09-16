@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { getDatabase } from '../utils/notion';
 import ProjectItem from '../components/ProjectItem';
 import Nav from '../components/Nav';
-import Back from '../components/Back';
 
 export const getStaticProps = async () => {
   const projects = await getDatabase(process.env.NOTION_PROJECTS_DB);
@@ -16,19 +15,18 @@ export const getStaticProps = async () => {
   };
 };
 
-export default function Projects({ projects }) {
+export default function Portfolio({ projects }) {
   return (
     <>
       <Head>
-        <title>Projects</title>
+        <title>Portfolio</title>
         <meta
           name='description'
-          content='Thibaud Gerin | Fullstack Developer | Projects'
+          content='Thibaud Gerin | Fullstack Developer | Portfolio'
         />
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Nav title='Projets' />
-      <Back home />
       <br />
       <ProjectGrid>
         {projects.map((p) => {

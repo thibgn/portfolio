@@ -3,7 +3,6 @@ import {
   getDatabase,
   getPropertiesFromPage,
 } from '../../utils/notion';
-import Link from 'next/link';
 import { NotionRenderer, Code } from 'react-notion-x';
 import styled from 'styled-components';
 import Nav from '../../components/Nav';
@@ -43,7 +42,6 @@ export default function Project({ recordMap, properties }) {
         <>
           <Nav title={title} />
           <ProjectHead>
-            <Back path={'/projects'} name='projets' home />
             <TagList tags={tags} />
             <a href={url} className='link_icon'>
               www&nbsp;
@@ -74,6 +72,7 @@ const ProjectHead = styled.div`
   flex-wrap: wrap;
   line-height: 2.2rem;
   justify-content: space-between;
+  align-items: baseline;
 
   @media (min-width: 768px) {
   }
