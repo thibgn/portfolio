@@ -24,9 +24,10 @@ export const getDatabase = async (databaseId) => {
   return response.results;
 };
 
-export const getTitleFromId = async (id) => {
+export const getPropertiesFromPage = async (id) => {
   const response = await notion.pages.retrieve({
     page_id: id,
   });
-  return response.properties.title.title[0].plain_text;
+
+  return response.properties;
 };

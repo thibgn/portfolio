@@ -4,15 +4,14 @@ import styled from 'styled-components';
 export default function Back({ path, name, home }) {
   return (
     <Ariane>
-      &larr;&nbsp;
-      {home && (
-        <Link href={'/'}>
-          <a>home&nbsp;</a>
-        </Link>
-      )}
       {path && (
         <Link href={path}>
           <a>/&nbsp;{name}</a>
+        </Link>
+      )}
+      {home && (
+        <Link href={'/'}>
+          <a>&larr;&nbsp;home&nbsp;</a>
         </Link>
       )}
     </Ariane>
@@ -21,9 +20,14 @@ export default function Back({ path, name, home }) {
 
 const Ariane = styled.div`
   display: flex;
+  flex-direction: column-reverse;
+
+  @media screen and (max-width: 767px) {
+    font-size: 0.7rem;
+  }
 
   a {
-    opacity: 0.6;
+    opacity: 0.5;
     transition: all 0.25s;
     &:hover {
       opacity: 1;

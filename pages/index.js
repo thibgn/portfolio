@@ -26,7 +26,7 @@ export default function Home() {
       <CvIntro />
       <h2 className='flex-center'>
         Check out my&nbsp;
-        <Link href='/projects/' alt='projects'>
+        <Link href='/projets/' alt='portfolio'>
           <a className='underlined underlined--offset'>latest projects</a>
         </Link>
       </h2>

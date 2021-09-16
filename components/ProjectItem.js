@@ -1,13 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import styled from 'styled-components';
-import { Colors } from '../styles/ThemeConfig';
-import useDarkMode from 'use-dark-mode';
 import { motion } from 'framer-motion';
+import TagList from './TagList.js';
 
 export default function ProjectItem({ p }) {
-  const theme = useDarkMode().value === true ? 'dark' : 'light';
-
   const img = p.properties.img_url.rich_text[0]?.plain_text || '';
   const name = p.properties.title.title[0]?.plain_text || '';
   const tags = p.properties.tags?.multi_select || '';
@@ -22,7 +19,7 @@ export default function ProjectItem({ p }) {
       initial={false}
     >
       <Projet>
-        <Link href={`/projects/${p.id}`} key={p.id} className='project'>
+        <Link href={`/projets/${p.id}`} key={p.id} className='project'>
           <a>
             <Image
               className='project_img'
@@ -35,18 +32,7 @@ export default function ProjectItem({ p }) {
             <div className='project_details'>
               <span className='project_name'>{name}</span>
               <div className='project_tags'>
-                {tags.map((tag) => {
-                  return (
-                    <Tag
-                      key={tag.id}
-                      className='tag'
-                      background={tag.color}
-                      theme={theme}
-                    >
-                      {tag.name}
-                    </Tag>
-                  );
-                })}
+                <TagList tags={tags} />
               </div>
               <p className='project_desc'>{desc}</p>
             </div>
@@ -98,23 +84,4 @@ const Projet = styled.div`
     font-size: 0.8em;
     opacity: 0.7;
   }
-`;
-
-const Tag = styled.span`
-  border: 1px solid ${(props) => Colors[props.background]};
-  color: ${Colors.light};
-  background: ${(props) => Colors[props.background]};
-  padding: 4px 8px;
-  border-radius: 6px;
-  font-size: 0.7em;
-  margin-top: 6px;
-  margin-left: 4px;
-  letter-spacing: 1px;
-  cursor: default;
-  transition: all 0.4s;
-  
-  &: hover {
-    background: ${(props) =>
-      props.theme === 'dark' ? Colors.dark : Colors.light};
-    color:${(props) => Colors[props.background]};
 `;
