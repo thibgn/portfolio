@@ -85,3 +85,24 @@ a {
   background-size: 100% 100%;
   border-color: transparent;
 }
+
+.notion-to-do-checked {
+  text-decoration: line-through;
+  opacity: .6;
+}
+
+.link_icon {
+  display: flex;
+  opacity: .7;
+  transition: all .5s;
+  align-items: center;
+}
+
+.link_icon:hover {
+  opacity: 1;
+}
+
+.link_icon svg {
+  max-height: 20px;
+  max-width: 20px;
+}
