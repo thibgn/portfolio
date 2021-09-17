@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 import Image from 'next/image';
+import { content } from '../content/index';
 
 export default function CvIntro() {
+  const locale = 'fr';
+  const translated = locale == 'fr' ? content.fr : content.en;
   return (
     <Intro>
       <Image src='/profile.png' width='500' height='500' alt='Thibaud Gerin' />
       <span>
-        <Subtitle>Hello I&apos;m Thibaud 👋</Subtitle>
-        I’m a digital crafter & acquisition specialist, living in the south of
-        France. I love technology as much as nature, enthusiastic when it comes
-        to music, personal development, crypto and many other things.
+        <Subtitle>{translated.intro_h}</Subtitle>
+        {translated.intro_p}
       </span>
     </Intro>
   );

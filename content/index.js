@@ -1,7 +1,10 @@
-export default content = {
+export const content = {
   fr: {
-    intro: `Je suis un artisan du numérique, doté d'une expertise en acquisition digitale. 
+    intro_h: `Salut, moi c'est Thibaud 👋`,
+    intro_p: `Je suis un artisan du numérique, doté d'une expertise en acquisition digitale. 
     Passioné par la technologie autant que la nature, j'apprécie particulièrement la musique, le développement personnel et les cryptomonnaies.`,
+    project_intro: `Jetez un oeil à mes `,
+    project_cta: `derniers projets`,
     core: [`Front-end`, `Back-end`, `Design`, `Acquisition`],
     soft: [`Créativité`, `Résolution de problèmes`, `Loyauté`],
     hobbies: `Crypto, Basket, Escalade, Échecs, Yoga, Nature, Méditation, Ski, Dessin`,
@@ -37,11 +40,15 @@ export default content = {
         edu: `Licence en Réseaux & Télécommunnications`,
       },
     ],
-    footer: `Fait à Marseille avec ❤`,
+    get_in_touch: 'contactez-moi',
+    footer: `Fait à Marseille avec <span>❤</span>`,
   },
 
   en: {
-    intro: `I’m a digital crafter & acquisition specialist, living in the south of France. I love technology as much as nature, enthusiastic when it comes to music, personal development, crypto and many other things.`,
+    intro_h: `Hello I'm Thibaud 👋`,
+    intro_p: `I’m a digital crafter & acquisition specialist, living in the south of France. I love technology as much as nature, enthusiastic when it comes to music, personal development, crypto and many other things.`,
+    project_intro: `Cheeck out my `,
+    project_cta: `last projects`,
     core: [`Front-end`, `Back-end`, `Design`, `Acquisition`],
     soft: ['Creativity', 'Problem solving', 'Loyalty'],
     hobbies: `Crypto, Basketball, Climbing, Outdoors, Chess, Yoga, Meditation, Ski, Drawing`,
@@ -77,6 +84,7 @@ export default content = {
         edu: `Licence in Computer Networking`,
       },
     ],
+    get_in_touch: 'get in touch',
     footer: `Made in Marseille with ❤`,
   },
 };

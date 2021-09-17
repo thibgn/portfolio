@@ -2,8 +2,11 @@ import { Colors } from '../styles/ThemeConfig';
 import styled from 'styled-components';
 import CvSection from '../components/CvSection';
 import useDarkMode from 'use-dark-mode';
+import { content } from '../content/index';
 
 export default function Curriculum() {
+  const locale = 'fr';
+  const translated = locale == 'fr' ? content.fr : content.en;
   const theme = useDarkMode().value === true ? 'dark' : 'light';
 
   return (
@@ -92,10 +95,7 @@ export default function Curriculum() {
       </CvSection>
       <CvSection>
         <Hobbies theme={theme}>
-          <p>
-            Crypto, Basketball, Climbing, Outdoors, Chess, Yoga, Meditation,
-            Ski, Drawing
-          </p>
+          <p>{translated.hobbies}</p>
         </Hobbies>
       </CvSection>
     </Resume>
