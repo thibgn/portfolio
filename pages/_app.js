@@ -6,6 +6,7 @@ import { lightTheme, darkTheme, GlobalStyles } from '../styles/ThemeConfig';
 import useDarkMode from 'use-dark-mode';
 import { useEffect, useState } from 'react';
 import { AnimateSharedLayout } from 'framer-motion';
+import Footer from '../components/Footer';
 
 export default function MyApp({ Component, pageProps }) {
   const [pageTitle, setPageTitle] = useState();
@@ -25,6 +26,7 @@ export default function MyApp({ Component, pageProps }) {
         <AnimateSharedLayout>
           <Main>
             <Component {...pageProps} />
+            <Footer />
           </Main>
         </AnimateSharedLayout>
       )}

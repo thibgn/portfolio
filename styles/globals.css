@@ -61,7 +61,6 @@ a {
 
 .notion-hr {
   border-width: 0 0 1px;
-
   border-image: linear-gradient(90deg, #FF3366, #20A4F3, rgba(135, 206, 235, 0) 50%) 0 0 100%;
   border-style: solid;
 }
@@ -76,6 +75,9 @@ a {
   text-align: center;
 }
 
+.notion-text {
+  opacity: .85;
+}
 .notion-text > a {
   opacity: 1;
   line-height: 1.2;
