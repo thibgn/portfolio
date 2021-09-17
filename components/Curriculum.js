@@ -5,6 +5,7 @@ import useDarkMode from 'use-dark-mode';
 
 export default function Curriculum() {
   const theme = useDarkMode().value === true ? 'dark' : 'light';
+
   return (
     <Resume>
       <CvSection theme={theme}>
@@ -58,7 +59,7 @@ export default function Curriculum() {
         </div>
       </CvSection>
       <CvSection theme={theme}>
-        <h2 className='title'>FORMATIONS 🎓</h2>
+        <h2 className='title'>EDUCATION 🎓</h2>
       </CvSection>
       <CvSection theme={theme}>
         <div className='category'>2020</div>

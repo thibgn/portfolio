@@ -7,7 +7,6 @@ import { NotionRenderer, Code } from 'react-notion-x';
 import styled from 'styled-components';
 import Nav from '../../components/Nav';
 import TagList from '../../components/TagList';
-import Back from '../../components/Back';
 
 export const getStaticPaths = async () => {
   const database = await getDatabase(process.env.NOTION_PROJECTS_DB);
@@ -35,7 +34,7 @@ export async function getStaticProps(context) {
 export default function Project({ recordMap, properties }) {
   const title = properties.title.title[0].plain_text || '';
   const tags = properties.tags.multi_select || '';
-  const url = properties.url.url || '';
+  const url = properties.url?.url || '';
   return (
     <>
       {recordMap && (

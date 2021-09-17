@@ -40,6 +40,9 @@ export default function ToggleTheme() {
 }
 
 const ToggleDark = styled.div`
+  @media screen and (max-width: 500px) {
+    width: 30px;
+  }
   & > svg {
     padding-top: 10px;
     width: 40px;
@@ -51,6 +54,9 @@ const ToggleDark = styled.div`
   }
 `;
 const ToggleLigth = styled.div`
+  @media screen and (max-width: 500px) {
+    width: 30px;
+  }
   & > svg {
     padding-top: 10px;
     width: 40px;

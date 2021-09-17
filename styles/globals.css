@@ -47,6 +47,7 @@ a {
 
 .flex-center {
   margin: 40px auto;
+  text-align: center;
   padding-right: 20px;
 }
 
@@ -56,6 +57,13 @@ a {
 
 .notion {
   font-family: inherit !important;
+}
+
+.notion-hr {
+  border-width: 0 0 1px;
+
+  border-image: linear-gradient(90deg, #FF3366, #20A4F3, rgba(135, 206, 235, 0) 50%) 0 0 100%;
+  border-style: solid;
 }
 
 .notion-asset-wrapper-image > div {

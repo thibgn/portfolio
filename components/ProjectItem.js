@@ -3,9 +3,10 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import TagList from './TagList.js';
+import { Blurhash } from 'react-blurhash';
 
-export default function ProjectItem({ p }) {
-  const img = p.properties.img_url.rich_text[0]?.plain_text || '';
+export default function ProjectItem({ p, photo }) {
+  const img = p.properties.img_url.rich_text[0]?.plain_text;
   const name = p.properties.title.title[0]?.plain_text || '';
   const tags = p.properties.tags?.multi_select || '';
   const desc = p.properties.description.rich_text[0]?.plain_text || '';
@@ -21,14 +22,25 @@ export default function ProjectItem({ p }) {
       <Projet>
         <Link href={`/projets/${p.id}`} key={p.id} className='project'>
           <a>
-            <Image
-              className='project_img'
-              src={img}
-              width={400}
-              height={300}
-              placeholder={blur}
-              alt=''
-            />
+            {img ? (
+              <Image
+                className='project_img'
+                src={img}
+                placeholder={blur}
+                alt=''
+                width={400}
+                height={300}
+              />
+            ) : (
+              <Blurhash
+                hash={photo}
+                width={400}
+                height={300}
+                resolutionX={32}
+                resolutionY={32}
+                punch={2}
+              />
+            )}
             <div className='project_details'>
               <span className='project_name'>{name}</span>
               <div className='project_tags'>
@@ -49,6 +61,7 @@ const Projet = styled.div`
     max-width: 400px;
     padding-bottom: 20px;
     transition: all 0.3s;
+
     & > div {
       position: relative;
     }
