@@ -2,11 +2,13 @@ import styled from 'styled-components';
 import ToggleTheme from '../components/ToggleTheme';
 import Back from './Back';
 import { useRouter } from 'next/router';
+
 export default function Nav({ title }) {
   const router = useRouter();
   const isProjets = router.pathname == '/projets';
   const isBlog = router.pathname == '/blog';
   const isProjet = router.pathname == '/projets/[id]';
+  const isJS30 = router.pathname == '/projets/js30';
   const isArticle = router.pathname == '/blog/[id]';
 
   console.log(router.pathname);
@@ -18,6 +20,7 @@ export default function Nav({ title }) {
         {isProjets && <Back home />}
         {isProjet && <Back path={'/projets'} name={'projets'} home />}
         {isArticle && <Back path={'/blog'} home />}
+        {isJS30 && <Back path={'/projets'} name={'projets'} home />}
         <Title>{title}</Title>
       </div>
       <ToggleTheme />

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
-import Link from 'next/link';
+import Nav from '../../../components/Nav';
 
 import Drumbox from '../../../components/Drumbox';
 import Canvas from '../../../components/Canvas';
@@ -32,9 +32,7 @@ export default function Js30() {
         />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Link href={'/projects'}>
-        <a>&larr; back</a>
-      </Link>
+      <Nav title={'JS-30'} />
       <Selecteur>
         <span className='active' onClick={(e) => handleChange(e)} id='drumbox'>
           drumbox
