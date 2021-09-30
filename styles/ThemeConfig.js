@@ -8,13 +8,17 @@ export const Colors = {
   light: '#F6F7F8',
   pink: '#EA9AEA',
   blue: '#71C8FE',
-  green: '#2EC4B6',
-  red: '#FF3366',
-  yellow: '#E5D931',
+  green: '#8fc93a',
+  red: '#ff0022',
+  yellow: '#e4cc37',
   purple: '#9D7DDE',
   orange: '#FFBB33',
+  darkorange: '#FD7E35',
   gray: '#626262',
   brown: '#9C7C6A',
+  indigo: '#5e2bff',
+  darkgreen: '#2b9720',
+  lightgray: '#5b618a',
 };
 
 export const lightTheme = {
