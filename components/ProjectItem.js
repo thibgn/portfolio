@@ -16,21 +16,23 @@ export default function ProjectItem({ p, photo }) {
       whileHover={{ scale: 1.05 }}
       onHoverStart={(e) => e.target.classList.add('top')}
       onHoverEnd={(e) => e.target.classList.remove('top')}
-      transition={{ ease: 'easeIn', duration: 0.2 }}
+      transition={{ ease: 'easeIn', duration: 0.25 }}
       initial={false}
     >
       <Projet>
         <Link href={`/projets/${p.id}`} key={p.id} className='project'>
           <a>
             {img ? (
-              <Image
-                className='project_img'
-                src={img}
-                placeholder={blur}
-                alt=''
-                width={400}
-                height={300}
-              />
+              <div className='project_img_wrapper'>
+                <Image
+                  className='project_img'
+                  src={img}
+                  placeholder={blur}
+                  alt=''
+                  layout='fill'
+                  objectFit='cover'
+                />
+              </div>
             ) : (
               <Blurhash
                 hash={photo}
@@ -65,6 +67,11 @@ const Projet = styled.div`
     & > div {
       position: relative;
     }
+  }
+
+  .project_img_wrapper {
+    width: 400px;
+    height: 300px;
   }
 
   .project_img {
