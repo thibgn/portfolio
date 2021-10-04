@@ -1,8 +1,8 @@
 export const content = {
   fr: {
     intro_h: `Salut, moi c'est Thibaud 👋`,
-    intro_p: `Je suis un artisan du numérique, doté d'une expertise en acquisition digitale. 
-    Passioné par la technologie autant que la nature, j'apprécie particulièrement la musique, le développement personnel et les cryptomonnaies.`,
+    intro_p: `Je suis un artisan du numérique, doté d'une expertise en acquisition digitale et d'une sensibilité à l'UX. 
+    Passionné par la technologie autant que la nature, j'apprécie particulièrement la musique, le développement personnel et les cryptomonnaies.`,
     project_intro: `Jetez un oeil à mes `,
     project_cta: `derniers projets`,
     core: [`Front-end`, `Back-end`, `Design`, `Acquisition`],

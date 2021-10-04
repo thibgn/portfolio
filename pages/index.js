@@ -6,6 +6,8 @@ import { Colors, Fonts } from '../styles/ThemeConfig';
 import Curriculum from '../components/Curriculum';
 import CvIntro from '../components/CvIntro';
 import Nav from '../components/Nav';
+import Competences from '../components/Competences';
+
 import { content } from '../content/index';
 
 export default function Home() {
@@ -26,19 +28,7 @@ export default function Home() {
 
       <Nav title='Thibaud Gerin' />
       <CvIntro />
-      <div id='competences'>
-        <div className='comp_section'>
-          <h3>Je sais faire 👍</h3>
-          <div>
-            Création de site, Design produit, Stratégies d&apos;acquisition &
-            marketing, Création de contenus
-          </div>
-        </div>
-        <div className='comp_section'>
-          <h3>J&apos;apprend 🧐</h3>
-          <div>Création de sites complexes, Blockchain development, TDD </div>
-        </div>
-      </div>
+      <Competences />
       <h2 className='flex-center'>
         {translated.project_intro}
         <Link href='/projets/' alt='portfolio'>

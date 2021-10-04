@@ -42,6 +42,12 @@ export default function Curriculum() {
         <h2 className='title'>EXPERIENCES 💻</h2>
       </CvSection>
       <CvSection theme={theme}>
+        <div className='category'>2021</div>
+        <div className='desc'>
+          <span>Développeur Freelance</span>
+        </div>
+      </CvSection>
+      <CvSection theme={theme}>
         <div className='category'>2018 - 2019</div>
         <div className='desc'>
           <span>

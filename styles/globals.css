@@ -122,38 +122,3 @@ a {
   max-height: 20px;
   max-width: 20px;
 }
-
-#competences {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding-bottom: 40px;
-}
-
-@media screen and (max-width: 500px) {
-  #competences {
-    flex-direction: column;
-  }
-}
-
-.comp_section {
-  padding: 0 20px;
-  max-width: 350px;
-  position: relative;
-}
-
-.comp_section div {
-  font-size: 0.9rem;
-  opacity: 0.9;
-}
-
-.comp_section:nth-child(1):after {
-  content: '';
-  position: absolute;
-  top: 25%;
-  right: 0;
-  width: 2px;
-  height: 75%;
-  background: #f6f7f8;
-  opacity: 0.6;
-}
