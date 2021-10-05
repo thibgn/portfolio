@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 import { content } from '../content/index';
+import { Colors } from '../styles/ThemeConfig';
 
 export default function CvIntro() {
   const locale = 'fr';
@@ -11,6 +12,7 @@ export default function CvIntro() {
       <span>
         <Subtitle>{translated.intro_h}</Subtitle>
         {translated.intro_p}
+        <p>{translated.looking}</p>
       </span>
     </Intro>
   );
@@ -25,6 +27,12 @@ const Intro = styled.div`
   gap: 2rem;
   > * > img {
     border-radius: 50%;
+  }
+
+  p {
+    font-style: italic;
+    color: ${Colors.secondary};
+    font-weight: bold;
   }
 
   @media screen and (max-width: 425px) {
