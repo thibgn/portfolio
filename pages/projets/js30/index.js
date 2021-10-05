@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
-import Nav from '../../../components/Nav';
 
+import Nav from '../../../components/Nav';
 import Drumbox from '../../../components/Drumbox';
 import Canvas from '../../../components/Canvas';
 

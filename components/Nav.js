@@ -5,10 +5,12 @@ import { useRouter } from 'next/router';
 
 export default function Nav({ title }) {
   const router = useRouter();
+
+  const re = new RegExp('/projets/(w*-?w*)*');
+
   const isProjets = router.pathname == '/projets';
   const isBlog = router.pathname == '/blog';
-  const isProjet = router.pathname == '/projets/[id]';
-  const isJS30 = router.pathname == '/projets/js30';
+  const isProjet = re.test(router.pathname);
   const isArticle = router.pathname == '/blog/[id]';
 
   return (
@@ -18,7 +20,6 @@ export default function Nav({ title }) {
         {isProjets && <Back home />}
         {isProjet && <Back path={'/projets'} name={'projets'} home />}
         {isArticle && <Back path={'/blog'} home />}
-        {isJS30 && <Back path={'/projets'} name={'projets'} home />}
         <Title>{title}</Title>
       </div>
       <ToggleTheme />

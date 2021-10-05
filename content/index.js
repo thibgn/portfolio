@@ -48,6 +48,7 @@ export const content = {
   en: {
     intro_h: `Hello I'm Thibaud 👋`,
     intro_p: `I’m a digital crafter & acquisition specialist, living in the south of France. I love technology as much as nature, enthusiastic when it comes to music, personal development, crypto and many other things.`,
+    looking: `Looking for a junior front or fullstack dev position.`,
     project_intro: `Cheeck out my `,
     project_cta: `last projects`,
     core: [`Front-end`, `Back-end`, `Design`, `Acquisition`],
