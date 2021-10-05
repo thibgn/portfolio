@@ -11,8 +11,6 @@ export default function Nav({ title }) {
   const isJS30 = router.pathname == '/projets/js30';
   const isArticle = router.pathname == '/blog/[id]';
 
-  console.log(router.pathname);
-  console.log(router);
   return (
     <NavWrapper>
       <div>

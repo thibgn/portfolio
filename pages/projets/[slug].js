@@ -2,6 +2,7 @@ import {
   notionAPI,
   getDatabase,
   getPropertiesFromPage,
+  getProjectIdFromSlug,
 } from '../../utils/notion';
 import { NotionRenderer, Code } from 'react-notion-x';
 import styled from 'styled-components';
@@ -10,16 +11,22 @@ import TagList from '../../components/TagList';
 
 export const getStaticPaths = async () => {
   const database = await getDatabase(process.env.NOTION_PROJECTS_DB);
+
   return {
-    paths: database.map((project) => ({ params: { id: project.id } })),
+    paths: database.map((project) => ({
+      params: {
+        slug: project.properties.slug.rich_text[0].plain_text,
+        id: project.id,
+      },
+    })),
     fallback: true,
   };
 };
 
 export async function getStaticProps(context) {
-  const { id } = context.params;
+  const { slug } = context.params;
+  const id = await getProjectIdFromSlug(slug);
   const recordMap = await notionAPI.getPage(id);
-  // const title = await getTitleFromId(id);
   const properties = await getPropertiesFromPage(id);
 
   return {

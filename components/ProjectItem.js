@@ -20,7 +20,11 @@ export default function ProjectItem({ p, photo }) {
       initial={false}
     >
       <Projet>
-        <Link href={`/projets/${p.id}`} key={p.id} className='project'>
+        <Link
+          href={`/projets/${p.properties.slug.rich_text[0].plain_text}`}
+          key={p.id}
+          className='project'
+        >
           <a>
             {img ? (
               <div className='project_img_wrapper'>

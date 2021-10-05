@@ -11,6 +11,19 @@ export const notion = new Client({
   auth: process.env.NOTION_TOKEN,
 });
 
+export const getProjectIdFromSlug = async (slug) => {
+  const response = await notion.databases.query({
+    database_id: process.env.NOTION_PROJECTS_DB,
+    filter: {
+      property: 'slug',
+      text: {
+        equals: slug,
+      },
+    },
+  });
+  return response.results[0].id;
+};
+
 export const getDatabase = async (databaseId) => {
   const response = await notion.databases.query({
     database_id: databaseId,

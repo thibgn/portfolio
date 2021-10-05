@@ -19,7 +19,7 @@ export const getStaticProps = async () => {
 };
 
 export default function Portfolio({ projects, photo }) {
-  console.log(photo);
+  console.log(projects);
   return (
     <>
       <Head>
