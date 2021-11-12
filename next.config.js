@@ -1,12 +1,13 @@
 module.exports = {
-  reactStrictMode: true,
-  images: {
-    domains: [
-      'www.notion.com',
-      'via.placeholder.com',
-      's3.us-west-2.amazonaws.com',
-      'www.notion.so',
-      'images.unsplash.com',
-    ],
-  },
+	reactStrictMode: true,
+	images: {
+		domains: [
+			'www.notion.com',
+			'via.placeholder.com',
+			's3.us-west-2.amazonaws.com',
+			'www.notion.so',
+			'images.unsplash.com',
+			'www.memesticks.club',
+		],
+	},
 };
