@@ -33,16 +33,38 @@ export default function GameOfLife() {
   }, []);
 
   useEffect(() => {
+    const neighborsLocation = [
+      [0, 1],
+      [0, -1],
+      [1, 1],
+      [1, 0],
+      [1, -1],
+      [-1, 0],
+      [-1, 1],
+      [-1, -1],
+    ];
     // animation loop
     let neighbors = 0;
     if (!isRunning) {
       return;
     } else {
+      grid.map((rows, i) =>
+        rows.map((col, j) => {
+          neighborsLocation.map((coor) => {
+            neighbors += grid[i + coor[0]][j + coor[1]];
+          });
+          if (neighbors == 3) {
+            toggleCell(i, j);
+          } else if (neighbors < 2 || (neighbors > 3 && grid[i][j] === 1)) {
+            toggleCell(i, j);
+          }
+        })
+      );
       // if neighbors < 2 = die
       // if neighbors > 3 = die
       // if neighbors = 3 = become alive
     }
-  }, []);
+  }, [isRunning]);
 
   return (
     <>
@@ -55,6 +77,7 @@ export default function GameOfLife() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Nav title={'Game of Life'} />
+      <button onClick={() => setIsRunning(true)}>start sim</button>
       <Game>
         {grid.map((rows, i) =>
           rows.map((col, j) => (

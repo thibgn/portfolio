@@ -44,6 +44,20 @@ export default function Curriculum() {
       <CvSection theme={theme}>
         <div className='category'>2021</div>
         <div className='desc'>
+          <span>
+            Teacher Assistant{' '}
+            <a
+              className='underlined underlined--offset'
+              href='https://www.lewagon.com/marseille'
+            >
+              @Le Wagon
+            </a>
+          </span>
+        </div>
+      </CvSection>
+      <CvSection theme={theme}>
+        <div className='category'>2021</div>
+        <div className='desc'>
           <span>Développeur Freelance</span>
         </div>
       </CvSection>

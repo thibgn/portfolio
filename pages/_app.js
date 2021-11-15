@@ -35,7 +35,7 @@ export default function MyApp({ Component, pageProps }) {
 }
 
 const Main = styled.section`
-  max-width: 900px;
+  max-width: 791px;
   min-height: 100vh;
   margin: 0 auto;
   padding: 16px 32px;
