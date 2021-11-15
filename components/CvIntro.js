@@ -31,7 +31,9 @@ const Intro = styled.div`
 
   p {
     font-style: italic;
+    padding-top: 20px;
     color: ${Colors.secondary};
+    font-size: 1.3rem;
     font-weight: bold;
   }
 
