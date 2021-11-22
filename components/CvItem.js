@@ -7,6 +7,7 @@
 // };
 
 export default function CvItem({ data }) {
+	console.log(data);
 	// const title = item.properties.img_url.rich_text[0]?.plain_text || '';
 	// const type = item.properties.title.title[0]?.plain_text || '';
 	// const date = item.properties.tags?.multi_select || '';

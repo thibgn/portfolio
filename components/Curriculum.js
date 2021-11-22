@@ -33,8 +33,8 @@ export default function Curriculum({ cleanCvData }) {
 
 	return (
 		<Resume>
-			{cleanCvData.map((item) => {
-				return <CvItem key={item.id} data={item.data} />;
+			{cleanCvData.map((cvItem) => {
+				return <CvItem key={cvItem.item.id} data={cvItem} />;
 			})}
 			<CvSection theme={theme} id='toolbox'>
 				<div className='category'>Boîte à outils</div>

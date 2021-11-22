@@ -33,8 +33,6 @@ export default function Home({ cleanCvData }) {
 	const translated = locale == 'fr' ? content.fr : content.en;
 	const theme = useDarkMode().value === true ? 'dark' : 'light';
 
-	console.log(cleanCvData);
-
 	return (
 		<>
 			<Head>
