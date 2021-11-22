@@ -9,7 +9,7 @@ export const getStaticPaths = async () => {
   const database = await getDatabase(process.env.NOTION_BLOG_DB);
   return {
     paths: database.map((post) => ({ params: { id: post.id } })),
-    fallback: true,
+    fallback: false,
   };
 };
 
@@ -28,16 +28,18 @@ export async function getStaticProps(context) {
 }
 
 export default function Post({ recordMap, properties }) {
-  const title = properties.title.title[0].plain_text;
+  const title = properties?.title.title[0].plain_text || '';
   return (
     <>
       <h1>{title}</h1>
-      <NotionRenderer
-        recordMap={recordMap}
-        components={{
-          code: Code,
-        }}
-      />
+      {recordMap && (
+        <NotionRenderer
+          recordMap={recordMap}
+          components={{
+            code: Code,
+          }}
+        />
+      )}
     </>
   );
 }
