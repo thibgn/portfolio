@@ -31,12 +31,8 @@ export default function Curriculum({ cleanCvData }) {
 	const translated = locale == 'fr' ? content.fr : content.en;
 	const theme = useDarkMode().value === true ? 'dark' : 'light';
 
-<<<<<<< HEAD
 	return (
 		<Resume>
-			{cleanCvData.map((cvItem) => {
-				return <CvItem key={cvItem.item.id} data={cvItem} />;
-			})}
 			<CvSection theme={theme} id='toolbox'>
 				<div className='category'>Boîte à outils</div>
 				<div className='desc'>
@@ -45,6 +41,20 @@ export default function Curriculum({ cleanCvData }) {
 			</CvSection>
 			<CvSection theme={theme}>
 				<h2 className='title'>EXPERIENCES 💻</h2>
+			</CvSection>
+			<CvSection theme={theme}>
+				<div className='category'>2021</div>
+				<div className='desc'>
+					<span>
+						Teacher Assistant{' '}
+						<a
+							className='underlined underlined--offset'
+							href='https://www.lewagon.com/marseille'
+						>
+							@Le Wagon
+						</a>
+					</span>
+				</div>
 			</CvSection>
 			<CvSection theme={theme}>
 				<div className='category'>2021</div>
@@ -129,115 +139,6 @@ export default function Curriculum({ cleanCvData }) {
 			</CvSection>
 		</Resume>
 	);
-=======
-  return (
-    <Resume>
-      <CvSection theme={theme} id='toolbox'>
-        <div className='category'>Boîte à outils</div>
-        <div className='desc'>
-          <TagList tags={tools} />
-        </div>
-      </CvSection>
-      <CvSection theme={theme}>
-        <h2 className='title'>EXPERIENCES 💻</h2>
-      </CvSection>
-      <CvSection theme={theme}>
-        <div className='category'>2021</div>
-        <div className='desc'>
-          <span>
-            Teacher Assistant{' '}
-            <a
-              className='underlined underlined--offset'
-              href='https://www.lewagon.com/marseille'
-            >
-              @Le Wagon
-            </a>
-          </span>
-        </div>
-      </CvSection>
-      <CvSection theme={theme}>
-        <div className='category'>2021</div>
-        <div className='desc'>
-          <span>Développeur Freelance</span>
-        </div>
-      </CvSection>
-      <CvSection theme={theme}>
-        <div className='category'>2018 - 2019</div>
-        <div className='desc'>
-          <span>
-            Product Owner{' '}
-            <a
-              className='underlined underlined--offset'
-              href='https://www.onepark.fr'
-            >
-              @Onepark
-            </a>
-          </span>
-          <div className='xp_details'>
-            Design de nouvelles features, rédaction d’user stories, refonte des
-            emails transactionnels
-          </div>
-        </div>
-      </CvSection>
-      <CvSection theme={theme}>
-        <div className='category'>2014 - 2018</div>
-        <div className='desc'>
-          <span>
-            Digital Marketing{' '}
-            <a
-              className='underlined underlined--offset'
-              href='https://www.onepark.fr'
-            >
-              @Onepark
-            </a>
-          </span>
-          <div className='xp_details'>
-            Création & déploiement des stratégies SEO & CRM dans 8 pays,
-            scénarios automatisés, implémentation d&apos;un RCU et d&apos;un
-            NPS, suivi de KPIs, service client, community management
-          </div>
-        </div>
-      </CvSection>
-      <CvSection theme={theme}>
-        <h2 className='title'>EDUCATION 🎓</h2>
-      </CvSection>
-      <CvSection theme={theme}>
-        <div className='category'>2020</div>
-        <div className='desc'>
-          <span>
-            <a
-              className='underlined underlined--offset'
-              href='https://www.lewagon.com/marseille'
-            >
-              Le Wagon
-            </a>
-            &nbsp;coding bootcamp
-          </span>
-        </div>
-      </CvSection>
-      <CvSection theme={theme}>
-        <div className='category'>2011 - 2013</div>
-        <div className='desc'>
-          <span>Master in Digital Communications</span>
-        </div>
-      </CvSection>
-      <CvSection theme={theme}>
-        <div className='category'>2008 - 2011</div>
-        <div className='desc'>
-          <span>Licence in Computer Networking</span>
-        </div>
-      </CvSection>
-      <CvSection theme={theme}>
-        <h2 className='title'>HOBBIES 🎨</h2>
-      </CvSection>
-      <CvSection>
-        <Hobbies theme={theme}>
-          <p>{translated.hobbies}</p>
-        </Hobbies>
-      </CvSection>
-    </Resume>
-  );
->>>>>>> d16422104419c666c5b49a8d89cf1ae4dc36b499
 }
 
 const Resume = styled.div`
