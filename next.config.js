@@ -20,7 +20,7 @@ module.exports = {
       's3.us-west-2.amazonaws.com',
       'www.notion.so',
       'images.unsplash.com',
-      'memesticks.club',
+      'www.memesticks.club',
     ],
   },
 >>>>>>> d16422104419c666c5b49a8d89cf1ae4dc36b499
