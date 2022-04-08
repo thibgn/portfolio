@@ -1,18 +1,18 @@
-import styled from 'styled-components';
-import Image from 'next/image';
-import { content } from '../content/index';
-import { Colors } from '../styles/ThemeConfig';
+import styled from "styled-components";
+import Image from "next/image";
+import { content } from "../content/index";
+import { Colors } from "../styles/ThemeConfig";
 
 export default function CvIntro() {
-  const locale = 'fr';
-  const translated = locale == 'fr' ? content.fr : content.en;
+  const locale = "fr";
+  const translated = locale == "fr" ? content.fr : content.en;
   return (
     <Intro>
-      <Image src='/profile.png' width='500' height='500' alt='Thibaud Gerin' />
+      <Image src="/profile.png" width="500" height="500" alt="Thibaud Gerin" />
       <span>
         <Subtitle>{translated.intro_h}</Subtitle>
         {translated.intro_p}
-        <p>{translated.looking}</p>
+        {/* <p>{translated.looking}</p> */}
       </span>
     </Intro>
   );
