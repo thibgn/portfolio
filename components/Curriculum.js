@@ -10,9 +10,10 @@ const tools = [
   { name: "HTML", color: "primary" },
   { name: "CSS", color: "accent" },
   { name: "JS", color: "yellow" },
+  { name: "Ruby", color: "red" },
+  { name: "Rails", color: "primary" },
   { name: "React", color: "blue" },
   { name: "Python", color: "green" },
-  { name: "Ruby", color: "red" },
   { name: "Next.js", color: "orange" },
   { name: "NodeJS", color: "secondary" },
   { name: "Tailwind", color: "purple" },
@@ -43,7 +44,7 @@ export default function Curriculum({ cleanCvData }) {
         <h2 className="title">EXPERIENCES 💻</h2>
       </CvSection>
       <CvSection theme={theme}>
-        <div className="category">2022</div>
+        <div className="category">2022 - 2025</div>
         <div className="desc">
           <span>
             Fullstack developer
@@ -68,12 +69,6 @@ export default function Curriculum({ cleanCvData }) {
               @Le Wagon
             </a>
           </span>
-        </div>
-      </CvSection>
-      <CvSection theme={theme}>
-        <div className="category">2021</div>
-        <div className="desc">
-          <span>Développeur Freelance</span>
         </div>
       </CvSection>
       <CvSection theme={theme}>

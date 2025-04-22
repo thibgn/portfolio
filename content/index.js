@@ -8,17 +8,17 @@ export const content = {
     project_cta: `derniers projets`,
     core: [`Front-end`, `Back-end`, `Design`, `Acquisition`],
     soft: [`Créativité`, `Résolution de problèmes`, `Loyauté`],
-    hobbies: `Crypto, Basket, Escalade, Échecs, Yoga, Nature, Méditation, Ski, Dessin`,
+    hobbies: `Basket, Escalade, Échecs, Yoga, Nature, Méditation, Ski, Dessin, Cuisine, Piano`,
     xp: [
       {
-        year: '2018 - 2019',
+        year: "2018 - 2019",
         job: `Product Owner <a className='underlined underlined--offset'
             href='https://www.onepark.fr'>
             @Onepark
           </a>`,
       },
       {
-        year: '2014 - 2018',
+        year: "2014 - 2018",
         job: `Marketing digital <a className='underlined underlined--offset'
             href='https://www.onepark.fr'>
             @Onepark
@@ -41,7 +41,7 @@ export const content = {
         edu: `Licence en Réseaux & Télécommunnications`,
       },
     ],
-    get_in_touch: 'contactez-moi',
+    get_in_touch: "contactez-moi",
     footer: `Fait à Marseille avec <span>❤</span>`,
   },
 
@@ -52,18 +52,18 @@ export const content = {
     project_intro: `Cheeck out my `,
     project_cta: `last projects`,
     core: [`Front-end`, `Back-end`, `Design`, `Acquisition`],
-    soft: ['Creativity', 'Problem solving', 'Loyalty'],
+    soft: ["Creativity", "Problem solving", "Loyalty"],
     hobbies: `Crypto, Basketball, Climbing, Outdoors, Chess, Yoga, Meditation, Ski, Drawing`,
     xp: [
       {
-        year: '2018 - 2019',
+        year: "2018 - 2019",
         job: `Product Owner <a className='underlined underlined--offset'
             href='https://www.onepark.fr'>
             @Onepark
           </a>`,
       },
       {
-        year: '2014 - 2018',
+        year: "2014 - 2018",
         job: `Digital Marketing <a className='underlined underlined--offset'
             href='https://www.onepark.fr'>
             @Onepark
@@ -86,7 +86,7 @@ export const content = {
         edu: `Licence in Computer Networking`,
       },
     ],
-    get_in_touch: 'get in touch',
+    get_in_touch: "get in touch",
     footer: `Made in Marseille with ❤`,
   },
 };
